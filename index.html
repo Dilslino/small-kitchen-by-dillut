@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Small Kitchen by Dillut</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                primary: '#FFE4E1',   // Soft Blush Pink
+                secondary: '#D8A7B1', // Muted Rose
+                accent: '#FAE1DD',    // Champagne Gold
+                dark: '#333333',      // Charcoal Grey
+                surface: 'rgba(255, 255, 255, 0.65)',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Outfit', 'sans-serif'],
+            },
+            boxShadow: {
+              'glass': '0 8px 32px 0 rgba(216, 167, 177, 0.25)',
+            },
+            animation: {
+              'blob': 'blob 7s infinite',
+              'marquee': 'marquee 25s linear infinite',
+              'float': 'float 3s ease-in-out infinite',
+              'wiggle': 'wiggle 1s ease-in-out infinite',
+              'sparkle': 'sparkle 2s ease-in-out infinite',
+              'heart-beat': 'heartBeat 1.5s ease-in-out infinite',
+              'slide-up': 'slideUp 0.8s ease-out forwards',
+              'pop-in': 'popIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards',
+            },
+            keyframes: {
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              },
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-100%)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              wiggle: {
+                '0%, 100%': { transform: 'rotate(-3deg)' },
+                '50%': { transform: 'rotate(3deg)' },
+              },
+              sparkle: {
+                '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+                '50%': { opacity: '0.5', transform: 'scale(0.8)' },
+              },
+              heartBeat: {
+                '0%, 100%': { transform: 'scale(1)' },
+                '14%': { transform: 'scale(1.15)' },
+                '28%': { transform: 'scale(1)' },
+                '42%': { transform: 'scale(1.15)' },
+                '70%': { transform: 'scale(1)' },
+              },
+              slideUp: {
+                '0%': { opacity: '0', transform: 'translateY(30px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              popIn: {
+                '0%': { opacity: '0', transform: 'scale(0.5)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(40px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #FDF6F6;
+        color: #333333;
+        overflow-x: hidden;
+        -webkit-tap-highlight-color: transparent;
+      }
+      /* Custom scrollbar hide */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      
+      /* Scroll Animation Classes */
+      .scroll-animate {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .scroll-animate.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .scroll-animate-delay-1 { transition-delay: 0.1s; }
+      .scroll-animate-delay-2 { transition-delay: 0.2s; }
+      .scroll-animate-delay-3 { transition-delay: 0.3s; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
