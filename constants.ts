@@ -2,6 +2,7 @@ import { Product, Song } from './types';
 
 export const BRAND_NAME = "Small Kitchen by Dillut";
 export const WHATSAPP_NUMBER = "6281281274140";
+export const INSTAGRAM_URL = "https://instagram.com/dillaadrr";
 
 // NOTE: The previous Pixabay links likely expired, causing "The element has no supported sources".
 // Replaced with reliable Creative Commons / Test audio files to ensure playback works.
@@ -14,33 +15,27 @@ export const PLAYLIST: Song[] = [
   }
 ];
 
+export type MochiVariant = {
+  id: string;
+  label: string;
+  price: number; // in IDR
+};
+
+export const MOCHI_VARIANTS: MochiVariant[] = [
+  { id: 'hitam', label: 'Mochi Hitam', price: 15000 },
+  { id: 'hijau', label: 'Mochi Hijau', price: 15000 },
+  { id: 'putih', label: 'Mochi Putih', price: 15000 },
+];
+
 export const PRODUCTS: Product[] = [
   {
-    id: 'mochi-01',
-    title: "Signature Mochi",
-    subtitle: "Lembut, kenyal, sempurna. Isian ganache artisan yang lumer.",
-    price: "Rp 15.000",
-    priceTag: "Paling Laris",
+    id: 'mochi',
+    title: "Mochi",
+    subtitle: "Pilih varian mochi (hitam/hijau/putih) dan tentukan jumlahnya.",
+    price: "Mulai Rp 15.000",
+    priceTag: "Ready",
     gradient: "from-pink-200 to-rose-100",
-    whatsappMessage: "Halo Small Kitchen by Dillut! Saya mau pesan Signature Mochi."
-  },
-  {
-    id: 'seblak-01',
-    title: "Premium Seblak",
-    subtitle: "Pedas, gurih, bikin nagih. Cita rasa rempah asli Indonesia.",
-    price: "Rp 12.000",
-    priceTag: "Wajib Coba",
-    gradient: "from-orange-100 to-red-100",
-    whatsappMessage: "Halo Small Kitchen by Dillut! Saya mau pesan Premium Seblak."
-  },
-  {
-    id: 'cookies-01',
-    title: "Soft Baked Cookies",
-    subtitle: "Cokelat yang lumer di mulut bagaikan awan.",
-    price: "Rp 25.000",
-    priceTag: "Terbatas",
-    gradient: "from-amber-100 to-yellow-50",
-    whatsappMessage: "Halo Small Kitchen by Dillut! Saya mau pesan Soft Baked Cookies."
+    whatsappMessage: "Halo Small Kitchen by Dillut! Saya mau pesan Mochi."
   }
 ];
 

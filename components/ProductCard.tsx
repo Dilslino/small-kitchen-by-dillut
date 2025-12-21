@@ -5,7 +5,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 interface ProductCardProps {
   product: Product;
-  onClick: (message: string) => void;
+  onClick: () => void;
   index: number;
 }
 
@@ -19,7 +19,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onClick, inde
     >
       <GlassCard hoverEffect={true} className="p-2 cursor-pointer group">
         <div 
-          onClick={() => onClick(product.whatsappMessage)}
+          onClick={onClick}
           className="flex flex-col h-full"
         >
           {/* Visual Area */}

@@ -1,7 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { PLAYLIST } from '../constants';
-import { Pause, Play, SkipForward } from 'lucide-react';
-import { GlassCard } from './UI/GlassCard';
+import { Pause, Play } from 'lucide-react';
 
 export const MusicPlayer: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -11,32 +10,9 @@ export const MusicPlayer: React.FC = () => {
   // Ensure playlist safety
   const currentSong = PLAYLIST[currentSongIndex] || PLAYLIST[0];
 
-  useEffect(() => {
-    // Attempt autoplay on mount with a slight delay to ensure DOM readiness
-    const timer = setTimeout(() => {
-        if (audioRef.current) {
-          audioRef.current.volume = 0.5; // Set nice background volume
-          const playPromise = audioRef.current.play();
-    
-          if (playPromise !== undefined) {
-            playPromise
-              .then(() => {
-                setIsPlaying(true);
-              })
-              .catch((error) => {
-                // Autoplay was prevented by browser policy
-                console.log("Autoplay prevented:", error);
-                setIsPlaying(false);
-              });
-          }
-        }
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   const togglePlay = () => {
     if (audioRef.current) {
+      audioRef.current.volume = 0.5;
       if (isPlaying) {
         audioRef.current.pause();
         setIsPlaying(false);
@@ -77,13 +53,12 @@ export const MusicPlayer: React.FC = () => {
         backdrop-blur-2xl border border-white/60 
         shadow-[0_8px_24px_rgba(216,167,177,0.2),inset_0_0_24px_rgba(255,255,255,0.3)]"
       >
-        <audio 
-            key={currentSong.src} 
-            ref={audioRef} 
-            src={currentSong.src} 
+        <audio
+            key={currentSong.src}
+            ref={audioRef}
+            src={currentSong.src}
             onEnded={handleEnded}
             onError={handleError}
-            autoPlay={isPlaying}
         />
         
         <div className="flex items-center gap-2 px-2 py-1.5">
