@@ -47,7 +47,7 @@ export const MusicPlayer: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-4 left-4 z-50">
+    <div className="fixed top-24 left-6 z-40 opacity-80 hover:opacity-100 transition-opacity">
       <div className="rounded-full p-0 overflow-hidden 
         bg-gradient-to-br from-white/60 to-white/30 
         backdrop-blur-2xl border border-white/60 

@@ -104,7 +104,7 @@ const App: React.FC = () => {
         </div>
       </nav>
 
-      <main className="max-w-md mx-auto w-full relative pb-20">
+      <main className="max-w-md mx-auto w-full relative pb-32">
         {/* Hero Section */}
         <Hero />
 
