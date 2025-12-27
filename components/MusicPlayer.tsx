@@ -2,7 +2,11 @@ import React, { useState, useRef } from 'react';
 import { PLAYLIST } from '../constants';
 import { Pause, Play } from 'lucide-react';
 
-export const MusicPlayer: React.FC = () => {
+interface MusicPlayerProps {
+  className?: string;
+}
+
+export const MusicPlayer: React.FC<MusicPlayerProps> = ({ className = '' }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -47,11 +51,11 @@ export const MusicPlayer: React.FC = () => {
   };
 
   return (
-    <div className="fixed top-24 left-6 z-40 opacity-80 hover:opacity-100 transition-opacity">
+    <div className={`z-40 ${className}`}>
       <div className="rounded-full p-0 overflow-hidden 
         bg-gradient-to-br from-white/60 to-white/30 
         backdrop-blur-2xl border border-white/60 
-        shadow-[0_8px_24px_rgba(216,167,177,0.2),inset_0_0_24px_rgba(255,255,255,0.3)]"
+        shadow-[0_4px_16px_rgba(216,167,177,0.15),inset_0_0_16px_rgba(255,255,255,0.3)]"
       >
         <audio
             key={currentSong.src}

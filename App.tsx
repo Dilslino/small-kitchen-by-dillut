@@ -91,16 +91,7 @@ const App: React.FC = () => {
            <span className={`font-heading font-bold text-lg text-brand-dark transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0'}`}>
              dill's kitchen
            </span>
-           <button
-             className="w-10 h-10 rounded-full 
-               bg-gradient-to-br from-white/60 to-white/30 
-               backdrop-blur-xl border border-white/60 
-               shadow-[0_4px_16px_rgba(216,167,177,0.15),inset_0_0_16px_rgba(255,255,255,0.3)]
-               flex items-center justify-center active:scale-90 transition-all hover:scale-105"
-             onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
-           >
-             <ShoppingBag size={18} className="text-brand-dark" />
-           </button>
+           <MusicPlayer className="transform hover:scale-105 transition-transform" />
         </div>
       </nav>
 
@@ -154,10 +145,7 @@ const App: React.FC = () => {
 
       {/* Floating Elements Container */}
       
-      {/* 1. Music Player (Bottom Left) */}
-      <MusicPlayer />
-
-      {/* 2. Chat Widget (Bottom Right) */}
+      {/* 1. Chat Widget (Bottom Right) */}
       <ChatWidget />
 
       <MochiOrderModal
