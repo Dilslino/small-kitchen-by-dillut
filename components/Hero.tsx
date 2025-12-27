@@ -24,14 +24,21 @@ export const Hero: React.FC = () => {
       </div>
 
       <div className="relative z-10 max-w-md w-full">
-        {/* Logo Mark */}
+        {/* Logo Video */}
         <div className="mb-8 flex justify-center animate-pop-in" style={{ animationDelay: '0.2s', opacity: 0 }}>
-            <div className="w-20 h-20 rounded-2xl 
+            <div className="w-32 h-32 rounded-2xl 
               bg-gradient-to-br from-white/60 to-white/30 
               backdrop-blur-2xl border border-white/60 
               shadow-[0_8px_32px_rgba(216,167,177,0.25),inset_0_0_32px_rgba(255,255,255,0.4)]
-              flex items-center justify-center transform hover:rotate-6 transition-transform duration-300 animate-wiggle">
-                <span className="font-heading text-3xl font-bold text-brand-dark">sk.</span>
+              flex items-center justify-center transform hover:rotate-6 transition-transform duration-300 animate-wiggle overflow-hidden">
+                <video 
+                  src="/logo.mp4" 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
             </div>
         </div>
 
