@@ -1,6 +1,6 @@
 import { Product, Song } from './types';
 
-export const BRAND_NAME = "Small Kitchen by Dillut";
+export const BRAND_NAME = "dill's kitchen";
 export const WHATSAPP_NUMBER = "6281281274140";
 export const INSTAGRAM_URL = "https://instagram.com/dillaadrr";
 
@@ -35,7 +35,7 @@ export const PRODUCTS: Product[] = [
     price: "Mulai Rp 15.000",
     priceTag: "Ready",
     gradient: "from-pink-200 to-rose-100",
-    whatsappMessage: "Halo Small Kitchen by Dillut! Saya mau pesan Mochi."
+    whatsappMessage: "Halo dill's kitchen! Saya mau pesan Mochi."
   }
 ];
 

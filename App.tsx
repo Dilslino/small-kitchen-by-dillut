@@ -70,7 +70,7 @@ const App: React.FC = () => {
     );
 
     return [
-      'Halo Small Kitchen by Dillut! Saya mau pesan Mochi:',
+      'Halo dill\'s kitchen! Saya mau pesan Mochi:',
       ...lines,
       '',
       `Total item: ${totalQty}`,
@@ -88,7 +88,7 @@ const App: React.FC = () => {
       `}>
         <div className="max-w-md mx-auto flex justify-between items-center">
            <span className={`font-heading font-bold text-lg text-brand-dark transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0'}`}>
-             Small Kitchen by Dillut
+             dill's kitchen
            </span>
            <button
              className="w-10 h-10 rounded-full 
@@ -144,7 +144,7 @@ const App: React.FC = () => {
           
           <div className="mt-14 mb-4">
             <p className="font-sans text-[10px] text-gray-300 uppercase tracking-widest">
-              © 2025 Small Kitchen by Dillut.
+              © 2025 dill's kitchen.
             </p>
             <span className="text-[9px] text-gray-300 opacity-60 normal-case mt-1 block">Made with 🩷</span>
           </div>

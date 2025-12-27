@@ -43,7 +43,7 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* Brand Typography */}
-        <h1 className="font-heading text-4xl md:text-5xl font-bold text-brand-dark leading-[1.2] tracking-tight mb-4 animate-slide-up" style={{ animationDelay: '0.4s', opacity: 0 }}>
+        <h1 className="font-heading text-4xl md:text-7xl font-bold text-brand-dark leading-[1.2] tracking-tight mb-4 animate-slide-up" style={{ animationDelay: '0.4s', opacity: 0 }}>
           <span className="inline-block hover:animate-wiggle">{BRAND_NAME}</span>
         </h1>
 
