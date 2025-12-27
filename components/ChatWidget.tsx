@@ -48,7 +48,7 @@ export const ChatWidget: React.FC = () => {
           'X-Title': BRAND_NAME,
         },
         body: JSON.stringify({
-          model: 'qwen/qwen-2.5-coder-32b-instruct:free', // Using a free model as default, can be changed
+          model: 'qwen/qwen3-coder:free', // Using a free model as default, can be changed
           messages: [
             {
               role: 'system',
