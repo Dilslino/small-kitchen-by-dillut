@@ -95,7 +95,7 @@ const App: React.FC = () => {
         </div>
       </nav>
 
-      <main className="max-w-md md:max-w-6xl mx-auto w-full relative pb-32">
+      <main className="max-w-md md:max-w-6xl mx-auto w-full relative pb-4">
         {/* Hero Section */}
         <Hero />
 
@@ -144,7 +144,7 @@ const App: React.FC = () => {
         </section>
 
         {/* Footer */}
-        <footer className="mt-20 px-6 py-10 text-center border-t border-brand-secondary/20 scroll-animate">
+        <footer className="mt-20 px-6 pt-10 pb-6 text-center border-t border-brand-secondary/20 scroll-animate">
           {/* Instagram Link */}
           <a
             href={INSTAGRAM_URL}
@@ -155,7 +155,7 @@ const App: React.FC = () => {
             <Instagram size={24} />
           </a>
           
-          <div className="mt-14 mb-4">
+          <div className="mt-8 mb-2">
             <p className="font-sans text-[10px] text-gray-300 uppercase tracking-widest">
               © 2025 dill's kitchen.
             </p>
