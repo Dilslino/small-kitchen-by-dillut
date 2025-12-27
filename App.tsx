@@ -3,6 +3,7 @@ import { Hero } from './components/Hero';
 import { Marquee } from './components/Marquee';
 import { ProductCard } from './components/ProductCard';
 import { MusicPlayer } from './components/MusicPlayer'; // Import MusicPlayer
+import { ChatWidget } from './components/ChatWidget'; // Import ChatWidget
 import { MOCHI_VARIANTS, PRODUCTS, WHATSAPP_NUMBER, INSTAGRAM_URL } from './constants';
 import { ShoppingBag, Instagram } from 'lucide-react';
 import { MochiOrderModal } from './components/MochiOrderModal';
@@ -155,6 +156,9 @@ const App: React.FC = () => {
       
       {/* 1. Music Player (Bottom Left) */}
       <MusicPlayer />
+
+      {/* 2. Chat Widget (Bottom Right) */}
+      <ChatWidget />
 
       <MochiOrderModal
         open={isMochiModalOpen}
