@@ -105,8 +105,12 @@ export const ChatWidget: React.FC = () => {
           {/* Header */}
           <div className="p-4 bg-gradient-to-r from-pink-200 to-rose-200 border-b border-white/50 flex justify-between items-center">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-white/40 flex items-center justify-center">
-                <Sparkles size={16} className="text-brand-dark" />
+              <div className="w-8 h-8 rounded-full bg-white/40 flex items-center justify-center overflow-hidden">
+                <img 
+                  src="/pfpcs.jpg" 
+                  alt="CS Avatar" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <h3 className="font-heading font-bold text-brand-dark text-sm">CS {BRAND_NAME}</h3>
