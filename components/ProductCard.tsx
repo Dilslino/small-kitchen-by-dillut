@@ -60,13 +60,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onClick, inde
         </div>
 
         {/* Aesthetic Overlay */}
-        <div className="absolute inset-0 z-50 flex flex-col items-center justify-center bg-white/5 backdrop-blur-[2px]">
-          <span className="font-heading font-bold italic text-3xl md:text-4xl text-brand-dark tracking-widest drop-shadow-sm animate-pulse transform -rotate-6 mix-blend-overlay">
-            Coming Soon
-          </span>
-           <span className="font-heading font-bold italic text-3xl md:text-4xl text-brand-dark tracking-widest drop-shadow-lg animate-pulse transform -rotate-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            Coming Soon
-          </span>
+        <div className="absolute inset-0 z-50 flex items-center justify-center">
+          <div className="bg-white/80 backdrop-blur-md px-6 py-3 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.1)] transform -rotate-3 border border-white/60 animate-float">
+            <span className="font-heading font-bold italic text-2xl text-brand-dark tracking-[0.2em]">
+              COMING SOON
+            </span>
+          </div>
         </div>
       </GlassCard>
     </div>
