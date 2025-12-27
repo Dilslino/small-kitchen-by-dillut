@@ -61,7 +61,7 @@ export const MusicPlayer: React.FC = () => {
             onError={handleError}
         />
         
-        <div className="flex items-center gap-2 px-2 py-1.5">
+        <div className="flex items-center gap-0 md:gap-2 px-1.5 py-1.5 md:px-2 md:py-1.5">
           <button 
             onClick={togglePlay}
             className={`
@@ -73,7 +73,7 @@ export const MusicPlayer: React.FC = () => {
             {isPlaying ? <Pause size={12} fill="currentColor" /> : <Play size={12} fill="currentColor" className="ml-0.5" />}
           </button>
 
-          <div className="flex flex-col justify-center w-20 overflow-hidden">
+          <div className="hidden md:flex flex-col justify-center w-20 overflow-hidden transition-all duration-300">
             <span className="text-[10px] font-heading font-semibold text-brand-dark truncate">
               {currentSong.title}
             </span>
