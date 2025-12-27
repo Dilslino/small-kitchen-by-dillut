@@ -87,7 +87,7 @@ const App: React.FC = () => {
         transition-all duration-300
         ${isScrolled ? 'bg-white/70 backdrop-blur-lg border-b border-white/20 shadow-sm' : 'bg-transparent'}
       `}>
-        <div className="max-w-md mx-auto flex justify-between items-center">
+        <div className="max-w-md md:max-w-6xl mx-auto flex justify-between items-center">
            <span className={`font-heading font-bold text-lg text-brand-dark transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0'}`}>
              dill's kitchen
            </span>
@@ -95,7 +95,7 @@ const App: React.FC = () => {
         </div>
       </nav>
 
-      <main className="max-w-md mx-auto w-full relative pb-32">
+      <main className="max-w-md md:max-w-6xl mx-auto w-full relative pb-32">
         {/* Hero Section */}
         <Hero />
 
@@ -110,7 +110,7 @@ const App: React.FC = () => {
             <span className="text-brand-secondary font-heading font-bold uppercase tracking-widest text-xs mb-2">Menu Spesial</span>
           </div>
           
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 md:grid md:grid-cols-3 md:gap-8">
             {PRODUCTS.map((product, index) => (
               <ProductCard 
                 key={product.id} 
@@ -119,6 +119,27 @@ const App: React.FC = () => {
                 onClick={() => setIsMochiModalOpen(true)}
               />
             ))}
+            {/* Filler items to show grid better if only 1 product exists */}
+             {PRODUCTS.length === 1 && (
+               <>
+                 <div className="hidden md:block opacity-50 pointer-events-none grayscale">
+                    <ProductCard 
+                      key="placeholder-1" 
+                      product={{...PRODUCTS[0], title: "Coming Soon", subtitle: "Varian baru sedang disiapkan...", price: "???"}} 
+                      index={1}
+                      onClick={() => {}}
+                    />
+                 </div>
+                 <div className="hidden md:block opacity-50 pointer-events-none grayscale">
+                    <ProductCard 
+                      key="placeholder-2" 
+                      product={{...PRODUCTS[0], title: "Coming Soon", subtitle: "Tunggu tanggal mainnya!", price: "???"}} 
+                      index={2}
+                      onClick={() => {}}
+                    />
+                 </div>
+               </>
+             )}
           </div>
         </section>
 
