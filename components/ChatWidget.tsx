@@ -202,7 +202,7 @@ export const ChatWidget: React.FC = () => {
           ${isOpen ? 'rotate-90 scale-0 opacity-0' : 'scale-100 opacity-100'}
         `}
       >
-        <img src="/tombolchatlogo.jpg" alt="Chat" className="w-full h-full object-cover" />
+        <img src="/tombolchatlogo.jpg?v=1" alt="Chat" className="w-full h-full object-cover" />
       </button>
     </div>
   );
