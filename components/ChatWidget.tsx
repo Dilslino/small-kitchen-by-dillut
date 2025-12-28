@@ -198,11 +198,11 @@ export const ChatWidget: React.FC = () => {
           bg-gradient-to-br from-indigo-400 via-purple-400 to-pink-400 
           text-white shadow-lg 
           flex items-center justify-center 
-          hover:scale-110 hover:rotate-6 transition-all duration-300 animate-float
+          hover:scale-110 hover:rotate-6 transition-all duration-300 animate-float overflow-hidden
           ${isOpen ? 'rotate-90 scale-0 opacity-0' : 'scale-100 opacity-100'}
         `}
       >
-        <MessageSquare size={24} />
+        <img src="/tombolchatlogo.jpg" alt="Chat" className="w-full h-full object-cover" />
       </button>
     </div>
   );
