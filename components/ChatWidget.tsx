@@ -33,22 +33,20 @@ export const ChatWidget: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
+      const apiKey = import.meta.env.VITE_GROQ_API_KEY;
       
       if (!apiKey) {
-        throw new Error('API Key not found. Please set VITE_OPENROUTER_API_KEY in .env file.');
+        throw new Error('API Key not found. Please set VITE_GROQ_API_KEY in .env file.');
       }
 
-      const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+      const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${apiKey}`,
-          'HTTP-Referer': window.location.origin,
-          'X-Title': BRAND_NAME,
         },
         body: JSON.stringify({
-          model: 'xiaomi/mimo-v2-flash:free', // Using a free model as default, can be changed
+          model: 'llama3-70b-8192', // Using Llama 3 70B on Groq for high intelligence
           messages: [
             {
               role: 'system',
@@ -87,9 +85,9 @@ export const ChatWidget: React.FC = () => {
       setMessages(prev => [...prev, assistantMessage]);
     } catch (error) {
       console.error('Chat error:', error);
-      setMessages(prev => [...prev, { 
+        setMessages(prev => [...prev, { 
         role: 'assistant', 
-        content: 'Maaf, terjadi kesalahan koneksi atau API Key belum diatur. Silakan hubungi kami via WhatsApp.' 
+        content: 'Maaf, terjadi kesalahan koneksi atau API Key Groq belum diatur. Silakan hubungi kami via WhatsApp.' 
       }]);
     } finally {
       setIsLoading(false);
