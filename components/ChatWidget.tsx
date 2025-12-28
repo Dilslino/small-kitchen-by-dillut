@@ -46,7 +46,12 @@ export const ChatWidget: React.FC = () => {
           'Authorization': `Bearer ${apiKey}`,
         },
         body: JSON.stringify({
-          model: 'llama3-70b-8192', // Using Llama 3 70B as standard high-performance model on Groq
+          model: 'openai/gpt-oss-120b', // Using user-specified model
+          temperature: 1,
+          max_completion_tokens: 8192,
+          top_p: 1,
+          stream: false, // Keeping false for simpler implementation first, can be upgraded to true if needed
+          reasoning_effort: "medium",
           messages: [
             {
               role: 'system',
